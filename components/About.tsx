@@ -30,7 +30,7 @@ const highlights = [
 export default function About() {
   return (
     <section id="about" className="px-6 py-24">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 shadow-2xl shadow-black/30 md:p-12">
+      <div className="mx-auto max-w-7xl rounded-4xl border border-white/10 bg-white/3 p-8 shadow-2xl shadow-black/30 md:p-12">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">

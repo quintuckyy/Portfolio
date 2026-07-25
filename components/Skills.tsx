@@ -34,7 +34,7 @@ export default function Skills() {
             return (
               <div
                 key={category}
-                className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 transition hover:border-orange-500/60 hover:bg-orange-500/[0.03]"
+                className="rounded-4xl border border-white/10 bg-white/3 p-6 transition hover:border-orange-500/60 hover:bg-orange-500/3"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-400">
                   <Icon size={24} />

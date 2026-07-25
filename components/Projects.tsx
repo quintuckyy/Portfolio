@@ -36,10 +36,10 @@ export default function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] transition hover:border-orange-500/60 hover:bg-orange-500/[0.03]"
+              className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:border-orange-500/60 hover:bg-orange-500/3"
             >
               <div className="relative h-56 overflow-hidden border-b border-white/10 bg-black/40">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-red-500/10" />
+                <div className="absolute inset-0 bg-linenar-to-br from-orange-500/20 via-transparent to-red-500/10" />
 
                 <div className="absolute left-6 top-6 rounded-full border border-white/10 bg-black/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
                   Project 0{index + 1}

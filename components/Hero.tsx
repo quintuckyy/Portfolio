@@ -1,6 +1,9 @@
+"use client";
+
 import { MapPin, Sparkles } from "lucide-react";
 import { techChips } from "@/data/portfolio";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -23,7 +26,11 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_90%_at_50%_50%,transparent_55%,rgba(0,0,0,0.6)_100%)]" />
 
       <div className="relative mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-        <div>
+        <motion.div
+        initial={{ opacity: 0, y: 32 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
             <Sparkles size={16} className="text-orange-500" />
             Developer · Problem Solver · Lifelong Learner
@@ -77,7 +84,7 @@ export default function Hero() {
               Contact Me
             </a>
           </div>
-        </div>
+        </motion.div>
 
         <div className="relative hidden min-h-170 items-center justify-center lg:flex">
           

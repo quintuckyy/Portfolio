@@ -12,14 +12,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#0b0b0f]/80 backdrop-blur-xl">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#0c0a14]/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a
           href="#home"
           onClick={closeMenu}
           className="text-2xl font-bold tracking-tight"
         >
-          Quinn<span className="text-orange-500">.</span>
+          Quinn<span className="text-violet-500">.</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -27,7 +27,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-300 transition hover:text-orange-400"
+              className="text-sm text-zinc-300 transition hover:text-violet-400"
             >
               {link.label}
             </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <a
             href="#contact"
-            className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-600"
+            className="rounded-full bg-violet-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-600"
           >
             Get in Touch
           </a>
@@ -52,14 +52,14 @@ export default function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-[#0b0b0f]/95 px-6 py-6 backdrop-blur-xl md:hidden">
+        <div className="border-t border-white/10 bg-[#0c0a14]/95 px-6 py-6 backdrop-blur-xl md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm font-medium text-zinc-300 transition hover:border-orange-500/60 hover:text-orange-400"
+                className="rounded-2xl border border-white/10 bg-white/3 px-5 py-4 text-sm font-medium text-zinc-300 transition hover:border-violet-500/60 hover:text-violet-400"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={closeMenu}
-              className="rounded-2xl bg-orange-500 px-5 py-4 text-center text-sm font-semibold text-white transition hover:bg-orange-600"
+              className="rounded-2xl bg-violet-500 px-5 py-4 text-center text-sm font-semibold text-white transition hover:bg-violet-600"
             >
               Get in Touch
             </a>

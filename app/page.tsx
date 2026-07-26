@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#0b0b0f] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#0c0a14] text-white">
       <CursorGlow />
 
       <div className="relative z-10">

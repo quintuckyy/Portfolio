@@ -33,7 +33,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl rounded-4xl border border-white/10 bg-white/3 p-8 shadow-2xl shadow-black/30 md:p-12">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr]">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-500">
               About Me
             </p>
 
@@ -41,7 +41,7 @@ export default function About() {
               Building useful systems with clean design and reliable data.
             </h2>
 
-            <div className="mt-6 h-1 w-24 rounded-full bg-orange-500" />
+            <div className="mt-6 h-1 w-24 rounded-full bg-violet-500" />
 
             <p className="mt-8 max-w-2xl text-base leading-8 text-zinc-400">
               I&apos;m Quinn Agas, a BSIT graduate and Junior Full-Stack
@@ -66,9 +66,9 @@ export default function About() {
               return (
                 <div
                   key={item.title}
-                  className="rounded-3xl border border-white/10 bg-black/30 p-6 transition hover:border-orange-500/50 hover:bg-orange-500/5"
+                  className="rounded-3xl border border-white/10 bg-black/30 p-6 transition hover:border-violet-500/50 hover:bg-violet-500/5"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-400">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-400">
                     <Icon size={24} />
                   </div>
 

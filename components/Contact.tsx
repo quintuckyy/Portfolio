@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Contact() {
   return (
     <section id="contact" className="px-6 py-24">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-[#111116] to-[#1b120d] p-10">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-[#15101f] to-[#1c1030] p-10">
 
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-500">
           Contact
         </p>
 
@@ -23,9 +23,9 @@ export default function Contact() {
 
           <a
             href="mailto:quinnagas@gmail.com"
-            className="rounded-2xl border border-white/10 bg-black/30 p-6 transition hover:border-orange-500 hover:bg-orange-500/5"
+            className="rounded-2xl border border-white/10 bg-black/30 p-6 transition hover:border-violet-500 hover:bg-violet-500/5"
           >
-            <Mail className="mb-4 text-orange-400" size={28} />
+            <Mail className="mb-4 text-violet-400" size={28} />
 
             <h3 className="font-semibold">Email</h3>
 
@@ -37,9 +37,9 @@ export default function Contact() {
           <a
             href="https://github.com/quintuckyy"
             target="_blank"
-            className="rounded-2xl border border-white/10 bg-black/30 p-6 transition hover:border-orange-500 hover:bg-orange-500/5"
+            className="rounded-2xl border border-white/10 bg-black/30 p-6 transition hover:border-violet-500 hover:bg-violet-500/5"
           >
-            <FaGithub className="mb-4 text-orange-400" size={28} />
+            <FaGithub className="mb-4 text-violet-400" size={28} />
 
             <h3 className="font-semibold">GitHub</h3>
 
@@ -51,9 +51,9 @@ export default function Contact() {
           <a
             href="https://linkedin.com/in/quinn-agas/"
             target="_blank"
-            className="rounded-2xl border border-white/10 bg-black/30 p-6 transition hover:border-orange-500 hover:bg-orange-500/5"
+            className="rounded-2xl border border-white/10 bg-black/30 p-6 transition hover:border-violet-500 hover:bg-violet-500/5"
           >
-            <FaLinkedin className="mb-4 text-orange-400" size={28} />
+            <FaLinkedin className="mb-4 text-violet-400" size={28} />
 
             <h3 className="font-semibold">LinkedIn</h3>
 

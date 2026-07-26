@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <a href="#home" className="text-2xl font-bold tracking-tight">
-            Quinn<span className="text-orange-500">.</span>
+            Quinn<span className="text-violet-500">.</span>
           </a>
 
           <p className="mt-3 max-w-md text-sm leading-6 text-zinc-500">
@@ -23,7 +23,7 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="transition hover:text-orange-400"
+                className="transition hover:text-violet-400"
               >
                 {link.label}
               </a>
@@ -34,7 +34,7 @@ export default function Footer() {
             <a
               href="mailto:quinnagas@gmail.com"
               aria-label="Email Quinn Agas"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-orange-500/60 hover:text-orange-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-violet-500/60 hover:text-violet-400"
             >
               <Mail size={18} />
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub profile"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-orange-500/60 hover:text-orange-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-violet-500/60 hover:text-violet-400"
             >
               <FaGithub size={18} />
             </a>
@@ -54,7 +54,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn profile"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-orange-500/60 hover:text-orange-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-violet-500/60 hover:text-violet-400"
             >
               <FaLinkedin size={18} />
             </a>

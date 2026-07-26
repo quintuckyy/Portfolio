@@ -13,7 +13,7 @@ export default function Skills() {
     <section id="skills" className="px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-500">
             Skills & Tools
           </p>
 
@@ -34,9 +34,9 @@ export default function Skills() {
             return (
               <div
                 key={category}
-                className="rounded-4xl border border-white/10 bg-white/3 p-6 transition hover:border-orange-500/60 hover:bg-orange-500/3"
+                className="rounded-4xl border border-white/10 bg-white/3 p-6 transition hover:border-violet-500/60 hover:bg-violet-500/3"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-400">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-400">
                   <Icon size={24} />
                 </div>
 

@@ -8,7 +8,7 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-500">
               Featured Projects
             </p>
 
@@ -26,7 +26,7 @@ export default function Projects() {
             href="https://github.com/quintuckyy"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-orange-500/60 hover:text-orange-400"
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-violet-500/60 hover:text-violet-400"
           >
             View GitHub
             <ArrowUpRight size={16} />
@@ -40,7 +40,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:-translate-y-1 hover:border-orange-500/60 hover:bg-orange-500/3"
+                className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:-translate-y-1 hover:border-violet-500/60 hover:bg-violet-500/3"
             >
 
               <ProjectVisual title={project.title} index={index} />
@@ -53,7 +53,7 @@ export default function Projects() {
 
                   <ArrowUpRight
                     size={22}
-                    className="text-zinc-500 transition group-hover:text-orange-400"
+                    className="text-zinc-500 transition group-hover:text-violet-400"
                   />
                 </div>
 

@@ -5,28 +5,33 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
+import CursorGlow from "@/components/CursorGlow";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0b0b0f] text-white">
-      <Navbar />
-      <Hero />
+    <main className="min-h-screen overflow-hidden bg-[#0b0b0f] text-white">
+      <CursorGlow />
 
-      <Reveal>
-        <About />
-      </Reveal>
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
 
-      <Reveal>
-        <Projects />
-      </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
 
-      <Reveal>
-        <Skills />
-      </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
 
-      <Reveal>
-        <Contact />
-      </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+
+        <Reveal>
+          <Contact />
+        </Reveal>
+      </div>
     </main>
   );
   }

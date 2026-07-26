@@ -1,11 +1,25 @@
+"use client";
+
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import { navLinks } from "@/data/portfolio";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#0b0b0f]/80 backdrop-blur-xl">
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <a href="#home" className="text-2xl font-bold tracking-tight">
-          Quinn Agas<span className="text-orange-500">.</span>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <a
+          href="#home"
+          onClick={closeMenu}
+          className="text-2xl font-bold tracking-tight"
+        >
+          Quinn<span className="text-orange-500">.</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -13,20 +27,54 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-zinc-400 transition hover:text-white"
+              className="text-sm text-zinc-300 transition hover:text-orange-400"
             >
               {link.label}
             </a>
           ))}
+
+          <a
+            href="#contact"
+            className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-600"
+          >
+            Get in Touch
+          </a>
         </div>
 
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-600 md:inline-flex"
+        <button
+          type="button"
+          onClick={() => setIsOpen((current) => !current)}
+          aria-label="Toggle navigation menu"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white md:hidden"
         >
-          Get in Touch
-        </a>
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </nav>
+
+      {isOpen && (
+        <div className="border-t border-white/10 bg-[#0b0b0f]/95 px-6 py-6 backdrop-blur-xl md:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col gap-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm font-medium text-zinc-300 transition hover:border-orange-500/60 hover:text-orange-400"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            <a
+              href="#contact"
+              onClick={closeMenu}
+              className="rounded-2xl bg-orange-500 px-5 py-4 text-center text-sm font-semibold text-white transition hover:bg-orange-600"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

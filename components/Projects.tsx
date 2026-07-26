@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/portfolio";
+import ProjectVisual from "@/components/ProjectVisual";
 
 export default function Projects() {
   return (
@@ -34,37 +35,15 @@ export default function Projects() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
-            <article
-              key={project.title}
-              className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:border-orange-500/60 hover:bg-orange-500/3"
+            <a
+                key={project.title}
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:-translate-y-1 hover:border-orange-500/60 hover:bg-orange-500/3"
             >
-              <div className="relative h-56 overflow-hidden border-b border-white/10 bg-black/40">
-                <div className="absolute inset-0 bg-linenar-to-br from-orange-500/20 via-transparent to-red-500/10" />
 
-                <div className="absolute left-6 top-6 rounded-full border border-white/10 bg-black/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
-                  Project 0{index + 1}
-                </div>
-
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="rounded-2xl border border-white/10 bg-[#111116]/90 p-5 shadow-xl backdrop-blur">
-                    <div className="mb-4 flex items-center gap-2">
-                      <span className="h-3 w-3 rounded-full bg-red-500" />
-                      <span className="h-3 w-3 rounded-full bg-yellow-500" />
-                      <span className="h-3 w-3 rounded-full bg-green-500" />
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="h-3 w-3/4 rounded-full bg-white/20" />
-                      <div className="h-3 w-1/2 rounded-full bg-white/10" />
-                      <div className="grid grid-cols-3 gap-3">
-                        <div className="h-12 rounded-xl bg-orange-500/20" />
-                        <div className="h-12 rounded-xl bg-white/10" />
-                        <div className="h-12 rounded-xl bg-white/10" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ProjectVisual title={project.title} index={index} />
 
               <div className="p-7">
                 <div className="flex items-start justify-between gap-4">
@@ -93,7 +72,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

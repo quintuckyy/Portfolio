@@ -16,7 +16,26 @@ export const metadata: Metadata = {
   title: "Quinn Agas | Junior Full-Stack Developer",
   description:
     "Portfolio of Quinn Agas, a Junior Full-Stack Developer focused on database-driven web and mobile applications.",
+  keywords: [
+    "Quinn Agas",
+    "Junior Full-Stack Developer",
+    "React Developer",
+    "Django Developer",
+    "PostgreSQL",
+    "Portfolio",
+    "Makati Developer",
+  ],
+  authors: [{ name: "Quinn Agas" }],
+  creator: "Quinn Agas",
+  openGraph: {
+    title: "Quinn Agas | Junior Full-Stack Developer",
+    description: "Database-driven web applications, backend systems, and clean user interfaces.",
+    url: "https://quinn-portfolio.vercel.app",
+    siteName: "Quinn Agas Portfolio",
+    type: "website",
+  },
 };
+  
 
 export default function RootLayout({
   children,

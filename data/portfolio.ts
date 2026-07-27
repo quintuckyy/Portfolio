@@ -50,7 +50,7 @@ export const projects = [
 ];
 
 export const skills = {
-  Frontend: ["React", "TypeScript", "Tailwind CSS", "JavaScript"],
+  Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript"],
   Backend: ["Django", "Django REST Framework", "Python", "REST APIs"],
   Database: ["PostgreSQL", "MySQL", "SQL", "Firestore"],
   Tools: ["Git", "GitHub", "Docker", "Firebase", "Supabase"],

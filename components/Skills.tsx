@@ -7,6 +7,7 @@ import {
   SiGithub,
   SiJavascript,
   SiMysql,
+  SiNextdotjs,
   SiPostgresql,
   SiPython,
   SiReact,
@@ -26,6 +27,7 @@ const categoryIcons = {
 
 const skillIcons: Record<string, IconType | LucideIcon> = {
   React: SiReact,
+  "Next.js": SiNextdotjs,
   TypeScript: SiTypescript,
   "Tailwind CSS": SiTailwindcss,
   JavaScript: SiJavascript,
@@ -62,7 +64,7 @@ export default function Skills() {
             systems, CMS websites, and modern web interfaces.
           </p>
         </div>
-
+        
         <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(skills).map(([category, items]) => {
             const CategoryIcon =

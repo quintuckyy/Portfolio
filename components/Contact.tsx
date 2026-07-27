@@ -58,7 +58,7 @@ export default function Contact() {
             <h3 className="font-semibold">LinkedIn</h3>
 
             <p className="mt-2 text-zinc-400">
-              Connect with me
+              linkedin.com/in/quinn-agas/
             </p>
           </a>
 

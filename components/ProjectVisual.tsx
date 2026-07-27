@@ -1,56 +1,37 @@
+import Image from "next/image";
+
 type ProjectVisualProps = {
   title: string;
-  index: number;
+  image: string;
 };
 
-export default function ProjectVisual({ title, index }: ProjectVisualProps) {
-  const labels = [
-    ["Portfolio", "Reports", "Audit Logs"],
-    ["Members", "Announcements", "Admin"],
-    ["Savings", "Loans", "History"],
-    ["CMS", "Pages", "Content"],
-  ];
-
-  const currentLabels = labels[index] ?? ["System", "Data", "UI"];
-
+export default function ProjectVisual({ title, image }: ProjectVisualProps) {
   return (
-    <div className="relative h-56 overflow-hidden border-b border-white/10 bg-black/40">
-      <div className="absolute inset-0 bg-linear-to-br from-violet-500/20 via-transparent to-fuchsia-600/10" />
+    <div className="relative h-64 overflow-hidden border-b border-white/10 bg-black/40">
+      <div className="absolute inset-0 bg-linear-to-br from-violet-500/20 via-transparent to-fuchsia-500/10" />
 
-      <div className="absolute left-6 top-6 rounded-full border border-white/10 bg-black/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
-        Project 0{index + 1}
-      </div>
+      <div className="absolute inset-x-6 top-6 overflow-hidden rounded-2xl border border-white/10 bg-[#111116]/90 shadow-2xl shadow-black/40">
+        <div className="flex items-center gap-2 border-b border-white/10 bg-white/3 px-4 py-3">
+          <span className="h-3 w-3 rounded-full bg-red-500" />
+          <span className="h-3 w-3 rounded-full bg-yellow-500" />
+          <span className="h-3 w-3 rounded-full bg-green-500" />
 
-      <div className="absolute bottom-6 left-6 right-6">
-        <div className="rounded-2xl border border-white/10 bg-[#15101f]/90 p-5 shadow-xl backdrop-blur">
-          <div className="mb-4 flex items-center gap-2">
-            <span className="h-3 w-3 rounded-full bg-red-500" />
-            <span className="h-3 w-3 rounded-full bg-yellow-500" />
-            <span className="h-3 w-3 rounded-full bg-green-500" />
-          </div>
-
-          <p className="mb-4 text-sm font-semibold text-white">
+          <p className="ml-3 truncate text-xs font-medium text-zinc-400">
             {title}
           </p>
+        </div>
 
-          <div className="grid grid-cols-3 gap-3">
-            {currentLabels.map((label) => (
-              <div
-                key={label}
-                className="rounded-xl border border-white/10 bg-white/5 p-3"
-              >
-                <div className="mb-3 h-2 w-8 rounded-full bg-violet-500/50" />
-                <p className="text-[11px] text-zinc-400">{label}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-4 space-y-2">
-            <div className="h-2 w-full rounded-full bg-white/10" />
-            <div className="h-2 w-2/3 rounded-full bg-white/10" />
-          </div>
+        <div className="relative h-48">
+          <Image
+            src={image}
+            alt={`${title} screenshot`}
+            fill
+            className="object-cover object-top transition duration-500 group-hover:scale-105"
+          />
         </div>
       </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-[#0b0b0f] to-transparent" />
     </div>
   );
 }

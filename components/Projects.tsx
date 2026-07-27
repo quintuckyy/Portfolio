@@ -43,7 +43,7 @@ export default function Projects() {
                 className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:-translate-y-1 hover:border-violet-500/60 hover:bg-violet-500/3"
             >
 
-              <ProjectVisual title={project.title} index={index} />
+              <ProjectVisual title={project.title} image={project.image} />
 
               <div className="p-7">
                 <div className="flex items-start justify-between gap-4">

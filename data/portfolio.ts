@@ -20,28 +20,32 @@ export const projects = [
     description:
       "Full-stack investment database system with transactions, orders, reports, validation checks, audit logs, and CSV import/ETL.",
     tags: ["React", "TypeScript", "Django REST", "PostgreSQL"],
-    github: "https://github.com/quintuckyy/Investment-Database-System"
+    github: "https://github.com/quintuckyy/Investment-Database-System",
+    image: "/images/projects/investment-database.png",
   },
   {
     title: "SVConnect Admin",
     description:
       "Web-based admin dashboard for managing cooperative members, loans, savings, announcements, reports, and audit logs.",
     tags: ["JavaScript", "Firebase", "Tailwind CSS"],
-    github: "https://github.com/quintuckyy/Admin-SVConnect"
+    github: "https://github.com/quintuckyy/Admin-SVConnect",
+    image: "/images/projects/svconnect-admin.png",
   },
   {
     title: "SVConnect Application",
     description:
       "Mobile app for cooperative members to view savings, track loans, check transactions, and receive announcements.",
     tags: ["JavaScript", "Capacitor", "Firebase"],
-    github: "https://github.com/quintuckyy/Application-SVConnect"
+    github: "https://github.com/quintuckyy/Application-SVConnect",
+    image: "/images/projects/svconnect-app.png",
   },
   {
     title: "APC Academic Website",
     description:
       "CMS-powered academic website that allows staff to manage content through Wagtail without editing code.",
     tags: ["Django", "Wagtail CMS", "PostgreSQL", "Docker"],
-    github: "https://github.com/quintuckyy/APC_Website_Wagtail"
+    github: "https://github.com/quintuckyy/APC_Website_Wagtail",
+    image: "/images/projects/apc-website.png",
   },
 ];
 

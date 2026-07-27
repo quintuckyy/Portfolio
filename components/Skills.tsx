@@ -1,11 +1,47 @@
-import { Code2, Database, Server, Wrench } from "lucide-react";
+import { Code2, Database, Globe, Server, Wrench, type LucideIcon } from "lucide-react";
+import {
+  SiDjango,
+  SiDocker,
+  SiFirebase,
+  SiGit,
+  SiGithub,
+  SiJavascript,
+  SiMysql,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
 import { skills } from "@/data/portfolio";
 
-const skillIcons = {
+const categoryIcons = {
   Frontend: Code2,
   Backend: Server,
   Database: Database,
   Tools: Wrench,
+};
+
+const skillIcons: Record<string, IconType | LucideIcon> = {
+  React: SiReact,
+  TypeScript: SiTypescript,
+  "Tailwind CSS": SiTailwindcss,
+  JavaScript: SiJavascript,
+  Django: SiDjango,
+  "Django REST Framework": SiDjango,
+  Python: SiPython,
+  "REST APIs": Globe,
+  PostgreSQL: SiPostgresql,
+  MySQL: SiMysql,
+  SQL: Database,
+  Firestore: SiFirebase,
+  Git: SiGit,
+  GitHub: SiGithub,
+  Docker: SiDocker,
+  Firebase: SiFirebase,
+  Supabase: SiSupabase,
 };
 
 export default function Skills() {
@@ -27,32 +63,44 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(skills).map(([category, items]) => {
-            const Icon = skillIcons[category as keyof typeof skillIcons];
+            const CategoryIcon =
+              categoryIcons[category as keyof typeof categoryIcons];
 
             return (
               <div
                 key={category}
-                className="rounded-4xl border border-white/10 bg-white/3 p-6 transition hover:border-violet-500/60 hover:bg-violet-500/3"
+                className="rounded-3xl border border-white/10 bg-white/3 p-6 transition hover:border-violet-500/40"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-400">
-                  <Icon size={24} />
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-400">
+                    <CategoryIcon size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">{category}</h3>
+                    <p className="text-xs text-zinc-500">
+                      {items.length} {items.length === 1 ? "tool" : "tools"}
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="mb-5 text-xl font-bold text-white">
-                  {category}
-                </h3>
+                <div className="mt-5 flex flex-col gap-1">
+                  {items.map((skill) => {
+                    const SkillIcon = skillIcons[skill] ?? Code2;
 
-                <div className="flex flex-wrap gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-sm text-zinc-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                    return (
+                      <div
+                        key={skill}
+                        className="flex items-center gap-3 rounded-xl px-2 py-2 transition hover:bg-white/5"
+                      >
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-zinc-300">
+                          <SkillIcon size={15} />
+                        </div>
+                        <span className="text-sm text-zinc-300">{skill}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Quinn Agas | Junior Full-Stack Developer",
     description: "Database-driven web applications, backend systems, and clean user interfaces.",
-    url: "https://quinn-portfolio.vercel.app",
+    url: "https://portfolio-rouge-eta-80.vercel.app/",
     siteName: "Quinn Agas Portfolio",
     type: "website",
   },

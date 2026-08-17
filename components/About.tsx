@@ -3,13 +3,13 @@ import { Code2, Database, Rocket, TrendingUp } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Full-Stack Mindset",
+    title: "Full-Stack Development",
     description:
       "Comfortable working across frontend, backend, and database tasks.",
   },
   {
     icon: Database,
-    title: "Data-Driven",
+    title: "Backend & Data",
     description:
       "Focused on building systems with organized data and reliable workflows.",
   },
@@ -21,7 +21,7 @@ const highlights = [
   },
   {
     icon: TrendingUp,
-    title: "Always Improving",
+    title: "Continous Growth",
     description:
       "Flexible, adaptable, and eager to learn from real-world development work.",
   },
@@ -38,24 +38,23 @@ export default function About() {
             </p>
 
             <h2 className="max-w-3xl text-4xl font-bold leading-tight md:text-5xl">
-              Building useful systems with clean design and reliable data.
+              Building full-stack solutions with real-world impact.
             </h2>
 
             <div className="mt-6 h-1 w-24 rounded-full bg-violet-500" />
 
             <p className="mt-8 max-w-2xl text-base leading-8 text-zinc-400">
-              I&apos;m Quinn Agas, a BSIT graduate and Junior Full-Stack
-              Developer focused on building database-driven web and mobile
-              applications. I enjoy turning ideas into functional systems with
-              clean interfaces, practical backend logic, and organized data
-              workflows.
+              I'm Quinn Agas, an Information Technology graduate and Junior Full-Stack
+              Developer with hands-on experience building web applications, backend services, 
+              and database-driven systems.
             </p>
 
             <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-400">
-              My projects include admin dashboards, CMS-based websites, mobile
-              apps, REST APIs, SQL reports, validation checks, audit logs, and
-              CSV import workflows. I&apos;m flexible, adaptable, and eager to
-              grow through real development work.
+              Through my internship and academic projects, I've worked on admin dashboards,
+              CMS-based platforms, REST APIs, reporting tools, and relational databases. 
+              Beyond writing code, I've worked with stakeholders to understand requirements,
+              translate them into functional features, troubleshoot issues, and improve existing
+              workflows.
             </p>
           </div>
 

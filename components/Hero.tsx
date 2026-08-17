@@ -33,7 +33,7 @@ export default function Hero() {
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
             <Sparkles size={16} className="text-violet-500" />
-            Developer · Problem Solver · Lifelong Learner
+            Developer · Problem Solver · Continuous Learner
           </div>
 
           <h1 className="max-w-4xl text-5xl font-bold leading-tight tracking-tight md:text-7xl">
@@ -46,8 +46,8 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            I build database-driven web and mobile applications with clean UI,
-            practical backend systems, and modern developer workflows.
+            I build full-stack, database-driven applications with intuitive interfaces, reliable 
+            backend systems, and modern development pracitces.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

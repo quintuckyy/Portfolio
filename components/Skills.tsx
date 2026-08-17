@@ -11,6 +11,7 @@ import {
   SiPostgresql,
   SiPython,
   SiReact,
+  SiNodedotjs,
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
@@ -34,6 +35,7 @@ const skillIcons: Record<string, IconType | LucideIcon> = {
   Django: SiDjango,
   "Django REST Framework": SiDjango,
   Python: SiPython,
+  "Node.js": SiNodedotjs,
   "REST APIs": Globe,
   PostgreSQL: SiPostgresql,
   MySQL: SiMysql,
@@ -56,12 +58,12 @@ export default function Skills() {
           </p>
 
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Technologies I Work With
+            My Full-Stack Toolkit 
           </h2>
 
           <p className="mt-4 max-w-2xl text-zinc-400">
-            A focused stack for building full-stack applications, database-driven
-            systems, CMS websites, and modern web interfaces.
+            Technologies I use to build full-stack applications, backend services, 
+            database-driven systems, and modern web experiences.
           </p>
         </div>
         

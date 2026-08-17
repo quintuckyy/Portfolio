@@ -16,13 +16,14 @@ export const techChips = [
 
 export const projects = [
   {
-    title: "Investment Database System",
+    title: "SVConnect Application",
     description:
-      "Full-stack investment database system with transactions, orders, reports, validation checks, audit logs, and CSV import/ETL.",
-    tags: ["React", "TypeScript", "Django REST", "PostgreSQL"],
-    github: "https://github.com/quintuckyy/Investment-Database-System",
-    image: "/images/projects/investment-database.png",
+      "Mobile app for cooperative members to view savings, track loans, check transactions, and receive announcements.",
+    tags: ["JavaScript", "Capacitor", "Firebase"],
+    github: "https://github.com/quintuckyy/Application-SVConnect",
+    image: "/images/projects/svconnect-app.png",
   },
+
   {
     title: "SVConnect Admin",
     description:
@@ -31,14 +32,7 @@ export const projects = [
     github: "https://github.com/quintuckyy/Admin-SVConnect",
     image: "/images/projects/svconnect-admin.png",
   },
-  {
-    title: "SVConnect Application",
-    description:
-      "Mobile app for cooperative members to view savings, track loans, check transactions, and receive announcements.",
-    tags: ["JavaScript", "Capacitor", "Firebase"],
-    github: "https://github.com/quintuckyy/Application-SVConnect",
-    image: "/images/projects/svconnect-app.png",
-  },
+
   {
     title: "APC Academic Website",
     description:
@@ -47,11 +41,22 @@ export const projects = [
     github: "https://github.com/quintuckyy/APC_Website_Wagtail",
     image: "/images/projects/apc-website.png",
   },
+
+  {
+    title: "Investment Database System",
+    description:
+      "Full-stack investment database system with transactions, orders, reports, validation checks, audit logs, and CSV import/ETL.",
+    tags: ["React", "TypeScript", "Django REST", "PostgreSQL"],
+    github: "https://github.com/quintuckyy/Investment-Database-System",
+    image: "/images/projects/investment-database.png",
+  },
+  
+  
 ];
 
 export const skills = {
-  Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript"],
-  Backend: ["Django", "Django REST Framework", "Python", "REST APIs"],
+  Frontend: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
+  Backend: ["Python", "Django", "Django REST Framework","Node.js", "REST APIs"],
   Database: ["PostgreSQL", "MySQL", "SQL", "Firestore"],
   Tools: ["Git", "GitHub", "Docker", "Firebase", "Supabase"],
   

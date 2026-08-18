@@ -62,11 +62,11 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-5 flex flex-wrap gap-2.5">
             {techChips.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-white/5 bg-white/3 px-3.5 py-1.5 text-xs font-medium text-zinc-400"
+                className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-zinc-300"
               >
                 {tech}
               </span>
@@ -76,13 +76,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="rounded-full bg-violet-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-violet-600"
+              className="inline-flex w-44 items-center justify-center rounded-full bg-violet-500 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-violet-600"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-500/60 hover:text-violet-400"
+              className="inline-flex w-44 items-center justify-center rounded-full border border-white/10 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-violet-500/60 hover:text-violet-400"
             >
               Contact Me
             </a>

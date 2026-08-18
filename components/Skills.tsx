@@ -1,4 +1,4 @@
-import { Code2, Database, Globe, Server, Wrench, type LucideIcon } from "lucide-react";
+import { Braces, Code2, Database, Globe, Server, Wrench, type LucideIcon } from "lucide-react";
 import {
   SiDjango,
   SiDocker,
@@ -40,6 +40,7 @@ const skillIcons: Record<string, IconType | LucideIcon> = {
   PostgreSQL: SiPostgresql,
   MySQL: SiMysql,
   SQL: Database,
+  NoSQL: Braces,
   Firestore: SiFirebase,
   Git: SiGit,
   GitHub: SiGithub,

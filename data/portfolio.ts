@@ -10,6 +10,7 @@ export const techChips = [
   "JavaScript",
   "Python",
   "React",
+  "Node.js",
   "Django",
   "PostgreSQL",
 ];
@@ -57,7 +58,7 @@ export const projects = [
 export const skills = {
   Frontend: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   Backend: ["Python", "Django", "Django REST Framework","Node.js", "REST APIs"],
-  Database: ["PostgreSQL", "MySQL", "SQL", "Firestore"],
+  Database: ["PostgreSQL", "MySQL", "SQL", "NoSQL", "Firestore"],
   Tools: ["Git", "GitHub", "Docker", "Firebase", "Supabase"],
   
 };

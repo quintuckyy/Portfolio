@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import ProjectVisual from "@/components/ProjectVisual";
+import { StaggerGroup, StaggerItem } from "@/components/Stagger";
 
 export default function Projects() {
   return (
@@ -33,48 +34,49 @@ export default function Projects() {
           </a>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <a
-                key={project.title}
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="group overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition hover:-translate-y-1 hover:border-violet-500/60 hover:bg-violet-500/3"
-            >
+        <StaggerGroup className="grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <StaggerItem key={project.title}>
+              <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/60 hover:bg-violet-500/3 hover:shadow-xl hover:shadow-violet-500/10"
+              >
 
-              <ProjectVisual title={project.title} image={project.image} />
+                <ProjectVisual title={project.title} image={project.image} />
 
-              <div className="p-7">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-bold text-white">
-                    {project.title}
-                  </h3>
+                <div className="p-7">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-2xl font-bold text-white">
+                      {project.title}
+                    </h3>
 
-                  <ArrowUpRight
-                    size={22}
-                    className="text-zinc-500 transition group-hover:text-violet-400"
-                  />
+                    <ArrowUpRight
+                      size={22}
+                      className="text-zinc-500 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-violet-400"
+                    />
+                  </div>
+
+                  <p className="mt-4 leading-7 text-zinc-400">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                <p className="mt-4 leading-7 text-zinc-400">
-                  {project.description}
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </a>
+              </a>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );

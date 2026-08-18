@@ -34,7 +34,7 @@ export default function Footer() {
             <a
               href="mailto:quinnagas@gmail.com"
               aria-label="Email Quinn Agas"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-violet-500/60 hover:text-violet-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/60 hover:text-violet-400 active:scale-90"
             >
               <Mail size={18} />
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub profile"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-violet-500/60 hover:text-violet-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/60 hover:text-violet-400 active:scale-90"
             >
               <FaGithub size={18} />
             </a>
@@ -54,7 +54,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn profile"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition hover:border-violet-500/60 hover:text-violet-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-zinc-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500/60 hover:text-violet-400 active:scale-90"
             >
               <FaLinkedin size={18} />
             </a>

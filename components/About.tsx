@@ -1,4 +1,5 @@
 import { Code2, Database, Rocket, TrendingUp } from "lucide-react";
+import { StaggerGroup, StaggerItem } from "@/components/Stagger";
 
 const highlights = [
   {
@@ -58,30 +59,29 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <StaggerGroup className="grid gap-4 sm:grid-cols-2">
             {highlights.map((item) => {
               const Icon = item.icon;
 
               return (
-                <div
-                  key={item.title}
-                  className="rounded-3xl border border-white/10 bg-black/30 p-6 transition hover:border-violet-500/50 hover:bg-violet-500/5"
-                >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-400">
-                    <Icon size={24} />
+                <StaggerItem key={item.title}>
+                  <div className="group h-full rounded-3xl border border-white/10 bg-black/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/50 hover:bg-violet-500/5 hover:shadow-lg hover:shadow-violet-500/10">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-400 transition-transform duration-300 group-hover:scale-110">
+                      <Icon size={24} />
+                    </div>
+
+                    <h3 className="text-lg font-semibold text-white">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-6 text-zinc-400">
+                      {item.description}
+                    </p>
                   </div>
-
-                  <h3 className="text-lg font-semibold text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-zinc-400">
-                    {item.description}
-                  </p>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerGroup>
         </div>
       </div>
     </section>

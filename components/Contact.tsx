@@ -1,11 +1,11 @@
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { StaggerGroup, StaggerItem } from "@/components/Stagger";
 
 export default function Contact() {
   return (
     <section id="contact" className="px-6 py-24">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-[#15101f] to-[#1c1030] p-10">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-[#15101f] to-[#1c1030] p-6 sm:p-10">
 
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-500">
           Contact
@@ -20,7 +20,7 @@ export default function Contact() {
           If you think I'd be a great fit for your team, feel free to reach out.
         </p>
 
-        <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-3">
+        <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
           <StaggerItem>
             <a
@@ -36,6 +36,24 @@ export default function Contact() {
 
               <p className="mt-2 text-zinc-400">
                 quinnagas@gmail.com
+              </p>
+            </a>
+          </StaggerItem>
+
+          <StaggerItem>
+            <a
+              href="tel:+639617183671"
+              className="group block rounded-2xl border border-white/10 bg-black/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-500/5 hover:shadow-lg hover:shadow-violet-500/10"
+            >
+              <Phone
+                className="mb-4 text-violet-400 transition-transform duration-300 group-hover:scale-110"
+                size={28}
+              />
+
+              <h3 className="font-semibold">Phone</h3>
+
+              <p className="mt-2 text-zinc-400">
+                0961 718 3671
               </p>
             </a>
           </StaggerItem>

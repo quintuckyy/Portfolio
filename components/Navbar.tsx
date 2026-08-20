@@ -1,11 +1,30 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  Code2,
+  FolderKanban,
+  Home,
+  Mail,
+  Menu,
+  User,
+  X,
+  type LucideIcon,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "@/data/portfolio";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+const mobileNavIcons: Record<string, LucideIcon> = {
+  Home: Home,
+  About: User,
+  Projects: FolderKanban,
+  Skills: Code2,
+  Contact: Mail,
+};
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +37,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const closeMenu = () => {
     setIsOpen(false);
   };
 
   return (
+    <>
     <header
       className={`fixed left-0 top-0 z-50 w-full border-b backdrop-blur-xl transition-all duration-300 ${
         isScrolled
@@ -63,7 +90,8 @@ export default function Navbar() {
           type="button"
           onClick={() => setIsOpen((current) => !current)}
           aria-label="Toggle navigation menu"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white transition-transform duration-300 active:scale-90 md:hidden"
+          aria-expanded={isOpen}
+          className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white transition-transform duration-300 active:scale-90 md:hidden"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.span
@@ -74,54 +102,73 @@ export default function Navbar() {
               transition={{ duration: 0.2, ease: EASE }}
               className="flex items-center justify-center"
             >
-              {isOpen ? <X size={20} /> : <Menu size={20} />}
+              {isOpen ? <X size={18} /> : <Menu size={18} />}
             </motion.span>
           </AnimatePresence>
         </button>
       </nav>
+    </header>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: EASE }}
-            className="overflow-hidden border-t border-white/10 bg-[#0c0a14]/95 backdrop-blur-xl md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: EASE }}
+            style={{ backgroundColor: "#0c0a14" }}
+            className="fixed inset-0 top-16 z-40 flex flex-col backdrop-blur-2xl md:hidden"
           >
-            <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
-              {navLinks.map((link, index) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMenu}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.05, ease: EASE }}
-                  className="rounded-2xl border border-white/10 bg-white/3 px-5 py-4 text-sm font-medium text-zinc-300 transition hover:border-violet-500/60 hover:text-violet-400"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+            <nav className="flex flex-1 flex-col px-6 py-6">
+              <div className="flex flex-col">
+                {navLinks.map((link, index) => {
+                  const Icon = mobileNavIcons[link.label] ?? Home;
+
+                  return (
+                    <motion.a
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMenu}
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.05, ease: EASE }}
+                      className="group flex items-center justify-between border-b border-white/5 py-4 text-base font-medium text-zinc-300 transition-colors duration-200 hover:text-violet-400 active:text-violet-400"
+                    >
+                      <span className="flex items-center gap-3.5">
+                        <Icon
+                          size={18}
+                          className="text-zinc-500 transition-colors duration-200 group-hover:text-violet-400"
+                        />
+                        {link.label}
+                      </span>
+                      <ChevronRight
+                        size={16}
+                        className="text-zinc-700 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-violet-400"
+                      />
+                    </motion.a>
+                  );
+                })}
+              </div>
 
               <motion.a
                 href="#contact"
                 onClick={closeMenu}
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
                   delay: navLinks.length * 0.05,
                   ease: EASE,
                 }}
-                className="rounded-2xl bg-violet-500 px-5 py-4 text-center text-sm font-semibold text-white transition hover:bg-violet-600 active:scale-95"
+                className="mt-auto flex w-full items-center justify-center gap-2 rounded-full bg-violet-500 px-6 py-4 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/30 active:scale-95"
               >
                 Get in Touch
+                <ArrowRight size={16} />
               </motion.a>
-            </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }

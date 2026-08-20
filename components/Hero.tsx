@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden px-6 pt-24 lg:pt-20"
+      className="relative overflow-hidden px-5 pt-20 pb-16 sm:min-h-screen sm:px-6 sm:pt-24 sm:pb-0 lg:pt-20"
     >
       <div className="absolute left-[-10%] top-80 h-100 w-100 rounded-full bg-violet-600/10 blur-[120px]" />
 
@@ -42,11 +42,11 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_65%_at_68%_45%,transparent_30%,rgba(11,11,15,0.88)_100%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_90%_at_50%_50%,transparent_55%,rgba(0,0,0,0.6)_100%)]" />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 sm:min-h-[calc(100vh-5rem)] lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div variants={containerVariants} initial="hidden" animate="show">
           <motion.div
             variants={itemVariants}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300"
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 sm:mb-6"
           >
             <Sparkles size={16} className="text-violet-500" />
             Developer · Problem Solver · Continuous Learner
@@ -66,7 +66,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400"
+            className="mt-4 max-w-2xl text-base leading-6 text-zinc-400 sm:mt-6 sm:text-lg sm:leading-8"
           >
             I build full-stack, database-driven applications with intuitive interfaces, reliable
             backend systems, and modern development pracitces.
@@ -74,7 +74,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 flex flex-wrap items-center gap-3"
+            className="mt-6 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-3"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
               <MapPin size={16} className="text-violet-500" />
@@ -87,27 +87,33 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="mt-5 flex flex-wrap gap-2.5">
+          <motion.div
+            variants={itemVariants}
+            className="mt-4 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2.5"
+          >
             {techChips.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-zinc-300"
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-zinc-300 sm:px-3.5 sm:py-1.5 sm:text-xs"
               >
                 {tech}
               </span>
             ))}
           </motion.div>
 
-          <motion.div variants={itemVariants} className="mt-8 flex flex-wrap gap-4">
+          <motion.div
+            variants={itemVariants}
+            className="mt-5 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 lg:justify-start"
+          >
             <a
               href="#projects"
-              className="inline-flex w-44 items-center justify-center rounded-full bg-violet-500 px-6 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.03] hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/30 active:scale-95"
+              className="inline-flex w-full items-center justify-center rounded-full bg-violet-500 px-6 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.03] hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/30 active:scale-95 sm:w-44"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="inline-flex w-44 items-center justify-center rounded-full border border-white/10 px-6 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.03] hover:border-violet-500/60 hover:text-violet-400 active:scale-95"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.03] hover:border-violet-500/60 hover:text-violet-400 active:scale-95 sm:w-44"
             >
               Contact Me
             </a>

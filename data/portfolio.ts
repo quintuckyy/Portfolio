@@ -43,6 +43,16 @@ export const projects = [
     image: "/images/projects/apc-website.png",
   },
 
+
+  {
+    title: "Qivora",
+    description:
+      "Full-stack job search platform for tracking applications, interviews, resumes, and status updates, with Chrome extension autofill and Gmail email classification.",
+    tags: ["React", "TypeScript", "Node.js", "NestJS", "PostgreSQL", "Prisma", "Docker"],
+    github: "https://github.com/quintuckyy/Qivora",
+    image: "/images/projects/qivora.png",
+  },
+
   {
     title: "Investment Database System",
     description:
@@ -51,8 +61,16 @@ export const projects = [
     github: "https://github.com/quintuckyy/Investment-Database-System",
     image: "/images/projects/investment-database.png",
   },
-  
-  
+
+
+  {
+    title: "Bruno's Cafe Website",
+    description:
+      "Server-rendered café website with a custom design system, scroll animations, and easily updatable content.",
+    tags: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Cloudflare Workers"],
+    github: "https://brunoscafe-website.vercel.app/",
+    image: "/images/projects/cafe-website.png",
+  },
 ];
 
 export const skills = {

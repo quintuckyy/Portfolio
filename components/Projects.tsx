@@ -36,17 +36,17 @@ export default function Projects() {
 
         <StaggerGroup className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
-            <StaggerItem key={project.title}>
+            <StaggerItem key={project.title} className="h-full">
               <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="group block overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/60 hover:bg-violet-500/3 hover:shadow-xl hover:shadow-violet-500/10"
+                  className="group flex h-full flex-col overflow-hidden rounded-4xl border border-white/10 bg-white/3 transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/60 hover:bg-violet-500/3 hover:shadow-xl hover:shadow-violet-500/10"
               >
 
                 <ProjectVisual title={project.title} image={project.image} />
 
-                <div className="p-7">
+                <div className="flex flex-1 flex-col p-7">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-2xl font-bold text-white">
                       {project.title}
@@ -62,7 +62,7 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-auto flex flex-wrap gap-2 pt-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
